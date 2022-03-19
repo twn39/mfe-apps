@@ -2,6 +2,12 @@
 
 mfe-apps is an example micro fronted project based on Webpack Module Federation.
 
+![mfe](./mfe.PNG)
+
+the mfe-apps contain four projects, the shell is based on react framework,
+other three project is based on different framework and embed to the shell application.
+
+
 ## Installation
 
 Use the package manager `pnpm` to install packages.
@@ -15,6 +21,12 @@ pnpm install --filter=.
 Start the projects:
 ```shell
 pnpm run start --filter=.
+```
+
+Build all projects:
+
+```shell
+pnpm run build:prod --filter=.
 ```
 
 ## Contributing

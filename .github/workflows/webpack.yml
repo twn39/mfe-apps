@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: Build projects
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-    
+
     steps:
     - uses: actions/checkout@v2
 

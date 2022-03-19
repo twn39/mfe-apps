@@ -1,28 +1,20 @@
 # mfe-apps
 
-mfe-apps is a Python library for dealing with word pluralization.
+mfe-apps is an example micro fronted project based on Webpack Module Federation.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager `pnpm` to install packages.
 
 ```bash
-pip install foobar
+pnpm install --filter=.
 ```
 
 ## Usage
 
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+Start the projects:
+```shell
+pnpm run start --filter=.
 ```
 
 ## Contributing
@@ -41,9 +33,9 @@ Please make sure to update tests as appropriate.
 
 ## Contact
 
-Your Name - @your_twitter - email@example.com
+Curry Tang
 
-Project Link: https://github.com/your_username/repo_name
+Project Link: https://github.com/twn39/mfe-apps
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.

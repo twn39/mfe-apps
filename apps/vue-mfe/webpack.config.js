@@ -14,7 +14,7 @@ const config = (env, argv) => {
   return {
     entry: './src/index.js',
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, '../../dist/vue-mfe'),
       filename: '[name].[contenthash].js',
       assetModuleFilename: `${assetsDir}/[contenthash][ext]`,
       clean: true,
@@ -96,7 +96,7 @@ const config = (env, argv) => {
       port: 4202,
       open: true,
       static: {
-        directory: './dist'
+        directory: './dist/vue-mfe'
       },
       compress: true,
       historyApiFallback: {

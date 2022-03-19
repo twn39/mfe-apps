@@ -34,7 +34,7 @@ const config = (env, argv) => {
     ],
     mode,
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, '../../dist/react-shell'),
       filename: '[name].[contenthash].js',
       assetModuleFilename: `${assetsDir}/[contenthash][ext]`,
       clean: true,
@@ -127,7 +127,7 @@ const config = (env, argv) => {
       port: 4200,
       open: true,
       static: {
-        directory: './dist'
+        directory: './dist/react-shell'
       },
       compress: true,
       historyApiFallback: {
@@ -163,6 +163,10 @@ const config = (env, argv) => {
         filename: prod ? "[name].[contenthash].css" : "[name].[fullhash].css",
       }),
     ],
+    performance: {
+      hints: 'warning',
+      maxEntrypointSize: 512 * 1024, // 512Kib
+    },
     optimization: {
       minimize: prod,
       runtimeChunk: 'single',

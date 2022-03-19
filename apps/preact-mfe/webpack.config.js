@@ -35,7 +35,7 @@ const config = (env, argv) => {
     ],
     mode,
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, '../../dist/preact-mfe'),
       filename: '[name].[contenthash].js',
       assetModuleFilename: `${assetsDir}/[contenthash][ext]`,
       clean: true,
@@ -128,7 +128,7 @@ const config = (env, argv) => {
       port: 4201,
       open: true,
       static: {
-        directory: './dist'
+        directory: './dist/preact-mfe'
       },
       compress: true,
       historyApiFallback: {

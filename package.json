@@ -1,0 +1,11 @@
+{
+  "name": "mfe-apps",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspace": [
+    "apps/*"
+  ],
+  "author": "curry tang",
+  "license": "ISC"
+}

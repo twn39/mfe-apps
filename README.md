@@ -1,5 +1,8 @@
 # mfe-apps
 
+[![Build projects](https://github.com/twn39/mfe-apps/actions/workflows/webpack.yml/badge.svg?branch=main)](https://github.com/twn39/mfe-apps/actions/workflows/webpack.yml)
+
+
 mfe-apps is an example micro fronted project based on Webpack Module Federation.
 
 ![mfe](./mfe.PNG)

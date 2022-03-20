@@ -2,6 +2,8 @@
 
 [![Build projects](https://github.com/twn39/mfe-apps/actions/workflows/webpack.yml/badge.svg?branch=main)](https://github.com/twn39/mfe-apps/actions/workflows/webpack.yml)
 
+mfe-apps 是一个基于 Webpack WMF 的项目示例，支持多框架整合，以 React 项目为基座（理论上不限 React，其他框架都是可以），其它框架
+为子应用，目前包含 Preact，Vue，Solid，Lit。此项目采用 Pnpm 的 workspace 管理 monorepo 。
 
 mfe-apps is an example micro fronted project based on Webpack Module Federation.
 

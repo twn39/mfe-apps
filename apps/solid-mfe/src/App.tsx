@@ -7,7 +7,7 @@ const App = () => {
     return (
         <div>
             <p>{title}</p>
-            <img width={300} src={logoImage} alt="solidjs"/>
+            <img width={180} src={logoImage} alt="solidjs"/>
         </div>
     );
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="vue-mfe">
     <p>{{title}}</p>
-    <img width="300" src="../assets/images/vue.jpg" alt="">
+    <img width="180" src="../assets/images/vue.jpg" alt="">
   </div>
 </template>
 

@@ -9,7 +9,7 @@ class App extends Component<Props> {
     return (
       <div>
         <p>Preact MFE.</p>
-        <img width={300} src={logoImage} alt="preact"/>
+        <img width={150} src={logoImage} alt="preact"/>
       </div>
     );
   }

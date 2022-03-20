@@ -30,11 +30,11 @@ const config = (env, argv) => {
 
   return {
     entry: [
-      './src/index.js'
+      './src/index.ts'
     ],
     mode,
     output: {
-      path: path.resolve(__dirname, '../../dist/react-shell'),
+      path: path.resolve(__dirname, '../../dist/lit-mfe'),
       filename: '[name].[contenthash].js',
       assetModuleFilename: `${assetsDir}/[contenthash][ext]`,
       clean: true,
@@ -124,10 +124,10 @@ const config = (env, argv) => {
     },
     devtool: prod ? false : 'source-map',
     devServer: {
-      port: 4200,
+      port: 4204,
       open: true,
       static: {
-        directory: './dist/react-shell'
+        directory: './dist/lit-mfe'
       },
       compress: true,
       historyApiFallback: {
@@ -144,16 +144,13 @@ const config = (env, argv) => {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: 'reactShell',
-        remotes: {
-          preactMfe: 'preactMfe@http://localhost:4201/remoteEntry.js',
-          vueMfe: 'vueMfe@http://localhost:4202/remoteEntry.js',
-          solidMfe: 'solidMfe@http://localhost:4203/remoteEntry.js',
-          litMfe: 'litMfe@http://localhost:4204/remoteEntry.js',
+        name: 'litMfe',
+        filename: "remoteEntry.js",
+        exposes: {
+          './litMfe': './src/main.ts',
         },
         shared: {
-          react: {eager: true},
-          'react-dom': {eager: true},
+          lit: {eager: true, singleton: true}
         }
       }),
       new HtmlWebpackPlugin({
@@ -164,23 +161,6 @@ const config = (env, argv) => {
         filename: prod ? "[name].[contenthash].css" : "[name].[fullhash].css",
       }),
     ],
-    performance: {
-      hints: false,
-      maxEntrypointSize: 5 * 1024 * 1024, //kib
-    },
-    optimization: {
-      minimize: prod,
-      runtimeChunk: 'single',
-      splitChunks: {
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all'
-          }
-        }
-      }
-    },
   };
 };
 

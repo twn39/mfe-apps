@@ -22,11 +22,17 @@ pnpm install --filter=.
 ## Usage
 
 Start the projects:
+
+1. first run the mfe projects:
 ```shell
-pnpm run start --filter=.
+pnpm run start --filter=*-mfe
+```
+2. run the shell projects:
+```shell
+pnpm run start --filter=react-shell
 ```
 
-Build all projects:
+Build projects:
 
 ```shell
 pnpm run build:prod --filter=.

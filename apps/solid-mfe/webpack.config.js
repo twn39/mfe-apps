@@ -150,8 +150,8 @@ const config = (env, argv) => {
           './solidMfe': './src/main.tsx',
         },
         shared: {
-          "solid-js": {eager: true, requiredVersion: '1.3.13', strictVersion: true, singleton: true },
-          "solid-app-router": {eager: true, requiredVersion: '0.3.0', strictVersion: true, singleton: true },
+          "solid-js": {eager: true, requiredVersion: '1.5.5', strictVersion: true, singleton: true },
+          "solid-app-router": {eager: true, requiredVersion: '0.4.2', strictVersion: true, singleton: true },
         }
       }),
       new HtmlWebpackPlugin({

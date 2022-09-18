@@ -153,7 +153,7 @@ const config = (env, argv) => {
         },
         shared: {
           react: {eager: true},
-          'react-dom': {eager: true},
+          'react-dom/client': {eager: true},
         }
       }),
       new HtmlWebpackPlugin({

@@ -18,7 +18,7 @@ other three project is based on different framework and embed to the shell appli
 Use the package manager `pnpm` to install packages.
 
 ```bash
-pnpm install --filter=.
+pnpm --filter=* install
 ```
 
 ## Usage
@@ -27,17 +27,17 @@ Start the projects:
 
 1. first run the mfe projects:
 ```shell
-pnpm run start --filter=*-mfe
+pnpm --filter=*-mfe run start
 ```
 2. run the shell projects:
 ```shell
-pnpm run start --filter=react-shell
+pnpm --filter=react-shell run start
 ```
 
 Build projects:
 
 ```shell
-pnpm run build:prod --filter=.
+pnpm --filter=* run build:prod
 ```
 
 ## Contributing

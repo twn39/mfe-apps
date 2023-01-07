@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -26,5 +26,5 @@ jobs:
       run: npm install -g pnpm
     - name: Build
       run: |
-        pnpm install --filter=.
-        pnpm run build:prod --filter=.
+        pnpm --filter=* install
+        pnpm --filter=* run build:prod
